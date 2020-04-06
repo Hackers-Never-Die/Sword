@@ -1,16 +1,16 @@
-package com.candy.caishenaccountbook.ui.accountbook;
+package com.candy.caishenaccountbook.home.ui.me;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AccountBookViewModel extends ViewModel {
+public class MeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public AccountBookViewModel() {
+    public MeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is notifications fragment");
     }
 
     public LiveData<String> getText() {

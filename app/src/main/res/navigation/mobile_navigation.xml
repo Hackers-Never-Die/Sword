@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.candy.caishenaccountbook.ui.home.HomeFragment"
+        android:name="com.candy.caishenaccountbook.home.ui.home.HomeFragment"
         android:label="@string/title_account_book"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.candy.caishenaccountbook.ui.accountbook.AccountBookFragment"
+        android:name="com.candy.caishenaccountbook.home.ui.accountbook.AccountBookFragment"
         android:label="@string/title_record"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.candy.caishenaccountbook.ui.me.MeFragment"
+        android:name="com.candy.caishenaccountbook.home.ui.me.MeFragment"
         android:label="@string/title_me"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

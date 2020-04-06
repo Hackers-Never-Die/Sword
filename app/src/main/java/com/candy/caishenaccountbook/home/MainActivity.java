@@ -1,7 +1,8 @@
-package com.candy.caishenaccountbook;
+package com.candy.caishenaccountbook.home;
 
 import android.os.Bundle;
 
+import com.candy.caishenaccountbook.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
