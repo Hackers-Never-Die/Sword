@@ -1,54 +1,42 @@
 package com.candy.caishenaccountbook.home;
 
 import android.os.Bundle;
+import android.util.SparseArray;
 
 import com.candy.caishenaccountbook.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.candy.caishenaccountbook.home.ui.accountbook.AccountBookFragment;
+import com.candy.caishenaccountbook.home.ui.me.MeFragment;
+import com.candy.caishenaccountbook.home.ui.record.RecordFragment;
+import com.candy.rohmerui.RohmerBottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
+import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         initView();
     }
 
     private void initView() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-//        navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                return false;
-//            }
-//        });
-        mViewPager = findViewById(R.id.nav_vp);
-        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
+        RohmerBottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setAdapter(createAdapter());
     }
 
+    private RohmerBottomNavigationView.Adapter createAdapter() {
+        SparseArray<Fragment> array = new SparseArray<>();
+        array.put(R.id.navigation_me, new MeFragment());
+        array.put(R.id.navigation_account, new AccountBookFragment());
+        array.put(R.id.navigation_record, new RecordFragment());
+        RohmerBottomNavigationView.Adapter adapter = new RohmerBottomNavigationView.Adapter(getSupportFragmentManager(), R.id.nav_container);
+        adapter.setData(array);
+        adapter.setFirstCheckItem(R.id.navigation_account);
+        return adapter;
+    }
 }
