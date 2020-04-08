@@ -9,4 +9,19 @@
         <item name="statusBarBackground">@color/colorAccent</item>
     </style>
 
+    <style name="RecordTextTheme">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+    </style>
+
+    <style name="RecordEditTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintLeft_toRightOf">@id/barrier</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
 </resources>

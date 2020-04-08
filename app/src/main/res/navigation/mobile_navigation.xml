@@ -9,17 +9,17 @@
         android:id="@+id/navigation_home"
         android:name="com.candy.caishenaccountbook.home.ui.record.RecordFragment"
         android:label="@string/title_account_book"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_record" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.candy.caishenaccountbook.home.ui.accountbook.AccountBookFragment"
         android:label="@string/title_record"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_accountbook" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.candy.caishenaccountbook.home.ui.me.MeFragment"
         android:label="@string/title_me"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_me" />
 </navigation>

@@ -3,4 +3,21 @@
     <string name="title_account_book">账本</string>
     <string name="title_record">记一笔</string>
     <string name="title_me">我的</string>
+    <string name="record_in">记录借入</string>
+    <string name="record_out">记录借出</string>
+
+    <string name="record_name_out">借钱给谁</string>
+    <string name="record_name_in">向谁借钱</string>
+    <string name="record_count_out">借出金额</string>
+    <string name="record_count_in">借入金额</string>
+    <string name="record_rate">借款利率</string>
+    <string name="record_borrow_time">借款日期</string>
+    <string name="record_return_time">归还日期</string>
+    <string name="record_photo">照片</string>
+    <string name="record_note">备注</string>
+    <string name="finish">完成</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

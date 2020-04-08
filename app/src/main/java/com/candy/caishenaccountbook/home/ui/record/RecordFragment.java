@@ -7,14 +7,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.candy.caishenaccountbook.R;
+import com.candy.caishenaccountbook.record.RecordActivity;
 
-public class RecordFragment extends Fragment {
+public class RecordFragment extends Fragment implements View.OnClickListener {
 
     private RecordViewModel homeViewModel;
 
@@ -22,14 +21,33 @@ public class RecordFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(RecordViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        View root = inflater.inflate(R.layout.fragment_record, container, false);
+        TextView recordInTV = root.findViewById(R.id.text_record_in);
+        TextView recordOutTV = root.findViewById(R.id.text_record_out);
+        recordInTV.setOnClickListener(this);
+        recordOutTV.setOnClickListener(this);
         return root;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.text_record_in:
+                onRecordInClick();
+                break;
+            case R.id.text_record_out:
+                onRecordOutClick();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void onRecordInClick() {
+        RecordActivity.start(getActivity(), true);
+    }
+
+    private void onRecordOutClick() {
+        RecordActivity.start(getActivity(), false);
     }
 }
