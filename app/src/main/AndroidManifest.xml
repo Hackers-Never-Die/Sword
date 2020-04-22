@@ -8,18 +8,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".record.RecordActivity"></activity>
-        <activity
-            android:name=".home.MainActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".home.MainActivity">
+
+        </activity>
+        <activity android:name=".base.WebActivity" />
+        <activity android:name=".record.DetailActivity" />
+        <activity android:name=".record.RecordActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
