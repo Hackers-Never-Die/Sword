@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">财神账本</string>
-    <string name="title_account_book">账本</string>
+    <string name="app_name">财神记账</string>
+    <string name="title_account_book">资产</string>
     <string name="title_record">记一笔</string>
     <string name="title_me">我的</string>
     <string name="record_in">记录借入</string>
@@ -22,6 +22,14 @@
     <string name="me_logout">退出登录</string>
     <string name="me_suggestion">反馈意见</string>
     <string name="me_info">个人信息</string>
+
+    <string name="today_income">今日收益</string>
+    <string name="total_asset">总资产(元)</string>
+    <string name="month_income">本月收益</string>
+    <string name="year_income">本年收益</string>
+    <string name="month">本月</string>
+    <string name="year">本年</string>
+    <string name="detail">详情</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

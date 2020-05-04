@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/item_income_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/logout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:id="@+id/item_income_title"
+        app:layout_constraintLeft_toRightOf="@id/item_income_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/month_income"/>
+
+    <TextView
+        android:id="@+id/item_income_abs"
+        app:layout_constraintLeft_toRightOf="@id/item_income_icon"
+        app:layout_constraintTop_toBottomOf="@id/item_income_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:text="最近一比收益"/>
+
+    <ImageView
+        android:id="@+id/item_more_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/more"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/item_out_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/item_more_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="+0.001"
+        android:textColor="@color/red"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/item_income_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/item_more_iv"
+        app:layout_constraintTop_toBottomOf="@id/item_out_number"
+        android:layout_marginTop="5dp"
+        android:text="-0.033"
+        android:textColor="@color/green"
+        android:textSize="12sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

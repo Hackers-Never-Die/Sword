@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".home.ui.accountbook.AccountBookFragment">
 
     <TextView
@@ -13,4 +14,59 @@
         android:text="@string/app_name"
         tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/abstract_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/themeColor">
+
+                <TextView
+                    android:id="@+id/total_asset_tv"
+                    style="@style/HomeAbsText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/total_asset"/>
+
+                <TextView
+                    android:id="@+id/total_asset_number"
+                    app:layout_constraintTop_toBottomOf="@id/total_asset_tv"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    style="@style/HomeAbsNumber"
+                    android:text="+11133.dd"
+                    />
+
+                <TextView
+                    android:id="@+id/today_income_tv"
+                    style="@style/HomeAbsText"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/today_income"/>
+
+                <TextView
+                    android:id="@+id/today_income_number"
+                    style="@style/HomeAbsNumber"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/today_income_tv"
+                    android:text="-90033"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include layout="@layout/item_income"/>
+
+            <include layout="@layout/item_income"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

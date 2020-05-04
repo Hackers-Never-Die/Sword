@@ -3,8 +3,6 @@ package com.candy.caishenaccountbook.record
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.candy.caishenaccountbook.R
 import com.candy.caishenaccountbook.base.BaseActivity
@@ -13,7 +11,7 @@ import com.candy.caishenaccountbook.record.ui.RecordOutFragment
 
 class RecordActivity : BaseActivity(){
 
-    private var mToolbar: Toolbar? = null
+    private var mToolbar: androidx.appcompat.widget.Toolbar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
